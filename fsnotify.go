@@ -395,6 +395,10 @@ func (e Event) String() string {
 	return fmt.Sprintf("%-13s %q", e.Op.String(), e.Name)
 }
 
+func (e Event) RenamedFrom() string{
+	return e.renamedFrom
+}
+
 type (
 	backend interface {
 		Add(string) error
